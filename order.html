@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quán Cà Phê — Order</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header (same style as other pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div><h1>Quán Cà Phê</h1><span class="tagline">Warm cups. Cozy vibes.</span></div>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="reservation.html">Reserve</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="order">
+      <h2 class="section-title">Place Your Order</h2>
+
+      <div class="order-container">
+        <!-- Menu Items rendered by script.js -->
+        <div id="orderMenu" class="menu-grid" aria-live="polite"></div>
+
+        <!-- Cart Sidebar -->
+        <aside class="cart">
+          <h3>Your Cart</h3>
+          <div id="cartList" class="cart-list" aria-live="polite"></div>
+
+          <div class="cart-summary">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Total</strong>
+              <strong id="cartTotal">₱0</strong>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="checkout">
+            <label for="cartName">Full Name *</label>
+            <input id="cartName" placeholder="Juan Dela Cruz" />
+
+            <label for="cartPhone">Phone *</label>
+            <input id="cartPhone" placeholder="09xx xxx xxxx" />
+
+            <label for="cartMethod">Method *</label>
+            <select id="cartMethod">
+              <option value="Pickup">Pickup</option>
+              <option value="Delivery">Delivery</option>
+            </select> 
+
+            <label for="cartPayment">Payment Method *</label>
+            <select id="cartPayment" onchange="handleCartPaymentChange()">
+              <option value="">Select Payment</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+              <option value="GCash">GCash</option>
+              <option value="PayMaya">PayMaya</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+
+            <!-- Hidden extra fields -->
+            <div id="paymentRequirements" style="display:none; margin-top:10px;">
+              <label for="cartAccount">Account Number *</label>
+              <input id="cartAccount" placeholder="e.g., 09xxxxxxxxx / Bank Account #" />
+
+              <label for="cartRef">Reference Number *</label>
+              <input id="cartRef" placeholder="Enter transaction reference #" />
+            </div>
+
+            <label for="cartAddress">Delivery Address (if Delivery)</label>
+            <input id="cartAddress" placeholder="Street, City" />
+
+            <div id="cartMsg" class="message-area" aria-live="polite"></div>
+
+            <button id="confirmCart" class="btn primary" style="width:100%;margin-top:10px">Confirm Order</button>
+            <button id="clearCart" class="btn" style="width:100%;margin-top:8px">Clear Cart</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left"><strong>Quán Cà Phê</strong><p class="muted">123 Brew St. • Mon–Sun 7:00 AM – 9:00 PM</p></div>
+      <div class="footer-right"><nav class="small-nav"><a href="#">Facebook</a><a href="#">Instagram</a></nav></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

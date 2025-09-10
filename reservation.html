@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quán Cà Phê — Reservation</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><div class="logo"></div><div><h1>Quán Cà Phê</h1><span class="tagline">Warm cups. Cozy vibes.</span></div></a>
+      <nav class="main-nav"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="order.html">Order</a><a href="reservation.html" class="active">Reserve</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="admin.html">Admin</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Reserve a Table</h2>
+
+      <div class="form-card">
+        <form id="resForm">
+          <div class="row">
+            <label>Full Name *</label>
+            <input id="rname" required />
+          </div>
+
+          <div class="row two">
+            <div>
+              <label>Date *</label>
+              <input id="rdate" type="date" required />
+            </div>
+            <div>
+              <label>Time Slot *</label>
+              <select id="rtime" required>
+                <option value="">Select...</option>
+                <option>08:00</option>
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Party Size *</label>
+            <select id="party" required><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+          </div>
+
+          <div class="row">
+            <label>Special Requests</label>
+            <input id="requests" placeholder="Near window, birthday, etc." />
+          </div>
+
+          <div id="resMsg" class="message-area" aria-live="polite"></div>
+
+          <div class="row">
+            <button type="submit" class="btn primary">Reserve</button>
+            <button type="reset" class="btn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-left"><strong>Quán Cà Phê</strong></div><div class="footer-right"><nav class="small-nav"><a href="#">FB</a><a href="#">IG</a></nav></div></div></footer>
+
+  <script src="script.js"></script>
+  <script>
+    // reservation functionality handled in script.js
+  </script>
+</body>
+</html>

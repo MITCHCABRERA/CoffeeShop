@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quán Cà Phê — Admin</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><div class="logo"></div><div><h1>Quán Cà Phê</h1><span class="tagline">Warm cups. Cozy vibes.</span></div></a>
+      <nav class="main-nav"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="order.html">Order</a><a href="reservation.html">Reserve</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="admin.html" class="active">Admin</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Admin Panel — Demo</h2>
+      <p class="muted">This is a demo admin panel that uses browser localStorage to store orders and reservations (for your school project). Data is stored only on your browser.</p>
+
+      <div class="admin-actions">
+        <button class="btn" id="viewBtn">View Stored Data</button>
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn" id="clearBtn">Clear All</button>
+      </div>
+
+      <pre id="adminOutput" class="admin-output"></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-left"><strong>Quán Cà Phê</strong></div><div class="footer-right"><nav class="small-nav"><a href="#">FB</a><a href="#">IG</a></nav></div></div></footer>
+
+  <script src="script.js"></script>
+  <script>
+    // admin event wiring (some handled in script.js)
+    document.getElementById('viewBtn').addEventListener('click', () => viewData());
+    document.getElementById('exportBtn').addEventListener('click', () => exportData());
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      if(confirm('Clear all orders and reservations from local storage?')) {
+        clearAllData();
+      }
+    });
+  </script>
+</body>
+</html>

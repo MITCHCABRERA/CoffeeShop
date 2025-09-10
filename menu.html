@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quán Cà Phê — Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div><h1>Quán Cà Phê</h1><span class="tagline">Warm cups. Cozy vibes.</span></div>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="reservation.html">Reserve</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Our Menu</h2>
+
+      <div class="filters">
+        <button class="filter active" data-cat="all">All</button>
+        <button class="filter" data-cat="coffee">Coffee</button>
+        <button class="filter" data-cat="tea">Tea</button>
+        <button class="filter" data-cat="pastries">Pastries</button>
+        <button class="filter" data-cat="others">Others</button>
+      </div>
+
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left"><strong>Quán Cà Phê</strong></div>
+      <div class="footer-right"><nav class="small-nav"><a href="#">Facebook</a><a href="#">Instagram</a></nav></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Render all menu items initially as 'all'
+    document.addEventListener('DOMContentLoaded', () => renderMenu('all'));
+
+    // filter buttons
+    document.querySelectorAll('.filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderMenu(btn.dataset.cat);
+      });
+    });
+  </script>
+</body>
+</html>
