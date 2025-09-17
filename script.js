@@ -5,13 +5,13 @@
 /* Sample menu data (used across pages) */
 const MENU = [
   { id:'c1', cat:'coffee', name:'Espresso', price:120, img:'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?q=80&w=800&auto=format&fit=crop', desc:'Rich, intense single shot.' },
-  { id:'c2', cat:'coffee', name:'Cappuccino', price:160, img:'https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=800&auto=format&fit=crop', desc:'Espresso with steamed milk & foam.' },
-  { id:'c3', cat:'coffee', name:'Iced Latte', price:170, img:'https://images.unsplash.com/photo-1523365280197-f1783db9fe62?q=80&w=800&auto=format&fit=crop', desc:'Chilled milk over espresso.' },
-  { id:'t1', cat:'tea', name:'Jasmine Green Tea', price:120, img:'https://images.unsplash.com/photo-1505575972945-2804b0ee9f6f?q=80&w=800&auto=format&fit=crop', desc:'Fragrant, floral finish.' },
-  { id:'t2', cat:'tea', name:'Matcha Latte', price:180, img:'https://images.unsplash.com/photo-1474899351970-801db6d67b54?q=80&w=800&auto=format&fit=crop', desc:'Stone-ground matcha with milk.' },
-  { id:'p1', cat:'pastries', name:'Butter Croissant', price:95, img:'https://images.unsplash.com/photo-1604908176997-43162fdf6c3b?q=80&w=800&auto=format&fit=crop', desc:'Flaky, baked daily.' },
-  { id:'p2', cat:'pastries', name:'Chocolate Cake', price:140, img:'https://images.unsplash.com/photo-1601972599720-b1cf0b2b5c39?q=80&w=800&auto=format&fit=crop', desc:'Moist, cocoa-rich slice.' },
-  { id:'o1', cat:'others', name:'Orange Juice', price:110, img:'https://images.unsplash.com/photo-1571076807833-6c1f1b1b1b3d?q=80&w=800&auto=format&fit=crop', desc:'Freshly squeezed.' }
+  { id:'c2', cat:'coffee', name:'Cappuccino', price:160, img:'https://lorcoffee.com/cdn/shop/articles/Cappuccino-exc.jpg?v=1684870907', desc:'Espresso with steamed milk & foam.' },
+  { id:'c3', cat:'coffee', name:'Iced Latte', price:170, img:'https://130529051.cdn6.editmysite.com/uploads/1/3/0/5/130529051/5BK3PAF4YPP5SRE5JPKFRHWC.jpeg', desc:'Chilled milk over espresso.' },
+  { id:'t1', cat:'tea', name:'Jasmine Green Tea', price:120, img:'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/jasmine-tea-1296x728-feature.jpg?w=1155&h=1528', desc:'Fragrant, floral finish.' },
+  { id:'t2', cat:'tea', name:'Matcha Latte', price:180, img:'https://cdn.loveandlemons.com/wp-content/uploads/2023/06/iced-matcha-latte.jpg', desc:'Stone-ground matcha with milk.' },
+  { id:'p1', cat:'pastries', name:'Butter Croissant', price:95, img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQT-ZyNYG5Ppa09CD9HEfaPfzPaL0dBNXU_w&s', desc:'Flaky, baked daily.' },
+  { id:'p2', cat:'pastries', name:'Chocolate Cake', price:140, img:'https://sugargeekshow.com/wp-content/uploads/2023/10/easy_chocolate_cake_slice.jpg', desc:'Moist, cocoa-rich slice.' },
+  { id:'o1', cat:'others', name:'Orange Juice', price:110, img:'https://cdn.healthyrecipes101.com/recipes/images/juices/healthy-carrot-orange-ginger-juice-recipe-claku5cw80050pw1bf2uv72zv.webp', desc:'Freshly squeezed.' }
 ];
 
 /* Local storage keys */
