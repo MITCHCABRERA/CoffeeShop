@@ -114,26 +114,17 @@ Use the navigation links to jump between pages, or use your browser's **Back** a
 
 Here’s an outline of how the website is organized:
 
-
-
-
 ## Structure
 
 | Section / Element          | Purpose / Content                                                                                                                                                                                     |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Navigation**             | Top menu with links to: Home, Menu, Order, Reserve, Gallery, About, Admin. This allows users to jump to different pages/sections.
-|
-| **Home / Hero Section**    | Welcomes visitors: “Welcome to KapeRazzo Coffee House … Order ahead or reserve a table.” Buttons for “Order Now” and “Reserve a Table.”
-|
-| **Special Offers**         | Highlights limited‐time or recurring promos: e.g. “Morning Duo”, “Matcha Wednesdays”, “Friends Bundle.” Each with images and prices.
-|
-| **Featured Menu Items**    | Shows a few highlighted items (Cappuccino, Matcha Latte, Butter Croissant) with images, descriptions, and prices. Gives a taste of what’s offered without overwhelming.
-
-| **Footer or Contact Info** | Café address, hours (Mon–Sun 7:00 AM – 9:00 PM) → establishes legitimacy, gives visiting info. Also social media icons.
-|
-| **Gallery / Images**       | Several images throughout: drinks, café scenes, pastries. These serve both for the specials and the menu preview.
-|
-| **Admin page linked**      | There is a link “Admin” in navigation, suggesting there’s a page reserved for administrative functions (maybe for managing content). It might be a placeholder. 
+| **Navigation**             | Top menu with links to: Home, Menu, Order, Reserve, Gallery, About, Admin. This allows users to jump to different pages/sections. ([mitchcabrera.github.io][1])                                       |
+| **Home / Hero Section**    | Welcomes visitors: “Welcome to KapeRazzo Coffee House … Order ahead or reserve a table.” Buttons for “Order Now” and “Reserve a Table.” ([mitchcabrera.github.io][1])                                 |
+| **Special Offers**         | Highlights limited‐time or recurring promos: e.g. “Morning Duo”, “Matcha Wednesdays”, “Friends Bundle.” Each with images and prices. ([mitchcabrera.github.io][1])                                    |
+| **Featured Menu Items**    | Shows a few highlighted items (Cappuccino, Matcha Latte, Butter Croissant) with images, descriptions, and prices. Gives a taste of what’s offered without overwhelming. ([mitchcabrera.github.io][1]) |
+| **Footer or Contact Info** | Café address, hours (Mon–Sun 7:00 AM – 9:00 PM) → establishes legitimacy, gives visiting info. Also social media icons. ([mitchcabrera.github.io][1])                                                 |
+| **Gallery / Images**       | Several images throughout: drinks, café scenes, pastries. These serve both for the specials and the menu preview. ([mitchcabrera.github.io][1])                                                       |
+| **Admin page linked**      | There is a link “Admin” in navigation, suggesting there’s a page reserved for administrative functions (maybe for managing content). It might be a placeholder. ([mitchcabrera.github.io][1])         |
 
 [1]: https://mitchcabrera.github.io/CoffeeShop/index.html "KapeRazzo Coffee House — Home"
 
