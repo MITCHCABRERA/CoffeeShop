@@ -133,7 +133,7 @@ Here’s an outline of how the website is organized:
 ## Technologies Used
 
 - HTML5, CSS3 (+ any frameworks used, e.g. Bootstrap, or custom CSS)  
-- JavaScript (for interactivity, forms)  
+- JavaScript (for interactivity, forms)- Upcoming enhancements
 - Optional backend (for Admin / data storage) – could be PHP, Node.js, or a static site with JSON.  
 - Deployment via GitHub Pages
 
