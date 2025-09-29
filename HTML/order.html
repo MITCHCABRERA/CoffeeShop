@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KapeRazzo Coffee House — Order</title>
+  <link rel="stylesheet" href="../STYLES/styles.css" />
+  <link rel="stylesheet" href="../STYLES/order_style.css">
+</head>
+<body>
+  <!-- Header (same style as other pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../PICTURES/KapeRazzo_logo.jpg" class="logo" />
+        <div><h1>KapeRazzo Coffee House</h1><span class="tagline">Warm cups. Cozy vibes.</span></div>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="reservation.html">Reserve</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+   <Section class="order">
+    <!-- Product Order Sidebar -->
+     <div class="hot-coffee">
+        <!-- Menu for Hot Coffee -->
+        <h2>Your Order</h2>
+        <div class="scrollbar">
+        <div class="menu-hot-coffee">
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE.png" alt=""> </div>
+           <p>Coffee Americano</p>
+           <p>&#8369; <strong>70.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE_LATTE_01.png" alt=""> </div>
+           <p>Coffee Latte</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+        </div>
+        <div class="menu-hot-coffee">
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_CHOCO.png" alt=""> </div>
+           <p>Hot Choco</p>
+           <p>&#8369; <strong>85.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_TEA.png" alt=""> </div>
+           <p>Hot Tea</p>
+           <p>&#8369; <strong>70.00</strong></p>
+          </div>
+        </div>
+        <div class="menu-hot-coffee">
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_01.png" alt=""> </div>
+           <p>Coffee Fraff</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_02.png" alt=""> </div>
+           <p>Choco Fraff</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_03.png" alt=""> </div>
+           <p>Taho Fraff</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+        </div>
+        <div class="menu-hot-coffee">
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_01.png" alt=""> </div>
+           <p>Strawberry Juice</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_02.png" alt=""> </div>
+           <p>Sweet Juice</p>
+           <p>&#8369; <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1"> 
+           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_03.png" alt=""> </div>
+           <p>Iced Tea</p>
+           <p>&#8369; <strong>70.00</strong></p>
+          </div>
+        </div>
+
+        </div>
+        <div class="order-total">
+          <h3>Total</h3>
+          <p>Quantity: 5</p>
+          <p>&#8369; <strong>880.00</strong></p>
+        </div>
+
+
+      </div>
+
+      <div class="place-order">
+      <div>
+        <h2 class="section-title">Place Your Order</h2>
+      </div>
+      
+
+      <div class="order-container">
+      
+        <!-- Cart Sidebar -->
+        <aside class="cart">
+          <h3>Your Cart</h3>
+          <div id="cartList" class="cart-list" aria-live="polite"></div>
+
+          <div class="cart-summary">
+        
+              <strong>Total</strong>
+              <strong id="cartTotal">₱0</strong>
+          
+          </div>
+          
+          <hr />
+
+          <div class="checkout">
+            <label for="cartName">Full Name *</label>
+            <input id="cartName" placeholder="Juan Dela Cruz" />
+
+            <label for="cartPhone">Phone *</label>
+            <input id="cartPhone" placeholder="09xx xxx xxxx" />
+
+            <label for="cartMethod">Method *</label>
+            <select id="cartMethod">
+              <option value="Pickup">Pickup</option>
+              <option value="Delivery">Delivery</option>
+            </select> 
+
+            
+
+            <!-- Hidden extra fields -->
+            <div id="paymentRequirements">
+              <label for="cartAccount">Account Number *</label>
+              <input id="cartAccount" placeholder="e.g., 09xxxxxxxxx / Bank Account #" />
+
+              <label for="cartRef">Reference Number *</label>
+              <input id="cartRef" placeholder="Enter transaction reference #" />
+            </div>
+
+            <label for="cartAddress">Delivery Address (if Delivery)</label>
+            <input id="cartAddress" placeholder="Street, City" />
+
+            <div id="cartMsg" class="message-area" aria-live="polite"></div>
+            <div class="confirmation-btn">
+              <button id="confirmCart" class="btn primary">Confirm Order</button>
+              <button id="clearCart" class="btn" >Clear Cart</button>
+            </div>
+            
+          </div>
+        </aside>
+      </div>
+      </div>
+    </Section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <strong>KapeRazzo Coffee House</strong>
+        <p class="muted">📍 11 GENERAL TIRONA ST. BRGY 138 BAGONG BARRIO • Mon–Sun 7:00 AM – 9:00 PM</p>
+      </div>
+      <div class="footer-right">
+        <nav class="small-nav">
+          <a href="https://instagram.com" target="_blank"><img class="IG-Logo" src="../PICTURES/HERO/IG_Logo.png" 
+       alt="Instagram"></a>
+          <a href="https://www.facebook.com/kaperazzoPH" target="_blank"><img class="FB-Logo" src="../PICTURES/HERO/FB_Logo.png" 
+       alt="Facebook"></a>
+
+        </nav>
+        <p class="muted">Built for a school project • No payments processed</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
