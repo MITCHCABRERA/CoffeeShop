@@ -7,7 +7,7 @@
 
 KapeRazzo Coffee House is a cozy neighborhood café serving specialty coffee, teas, and freshly baked pastries. We aim to create a warm, welcoming space where people can relax, order ahead, or reserve a table. Our goal is simple: good drinks, good food, good company.
 
-- Note: Updated codebase (per mentor feedback) is on branch update/mentor-feedback. Review there for the latest changes.
+- Note: Updated codebase (per mentor feedback) is on branch MS1_REVISION_CONRAD1. Review there for the latest changes.
 
 ---
 
