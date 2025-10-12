@@ -4,16 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KapeRazzo Coffee House — Order</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../STYLES/styles.css" />
   <link rel="stylesheet" href="../STYLES/order_style.css">
 </head>
 <body>
-  <!-- Header (same style as other pages) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html">
-        <img src="../PICTURES/KapeRazzo_logo.jpg" class="logo" />
-        <div><h1>KapeRazzo Coffee House</h1><span class="tagline">Warm cups. Cozy vibes.</span></div>
+        <img src="../PICTURES/KapeRazzo_logo.jpg" class="logo" alt="KapeRazzo Logo" />
+        <div>
+          <h1>KapeRazzo Coffee House</h1>
+          <span class="tagline">Warm cups. Cozy vibes.</span>
+        </div>
       </a>
       <nav class="main-nav" aria-label="Main">
         <a href="../index.html">Home</a>
@@ -27,102 +35,76 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
-   <Section class="order">
-    <!-- Product Order Sidebar -->
-     <div class="hot-coffee">
-        <!-- Menu for Hot Coffee -->
-        <h2>Your Order</h2>
-        <div class="scrollbar">
-        <div class="menu-hot-coffee">
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE.png" alt=""> </div>
-           <p>Coffee Americano</p>
-           <p>&#8369; <strong>70.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE_LATTE_01.png" alt=""> </div>
-           <p>Coffee Latte</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-        </div>
-        <div class="menu-hot-coffee">
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_CHOCO.png" alt=""> </div>
-           <p>Hot Choco</p>
-           <p>&#8369; <strong>85.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/HOT_TEA.png" alt=""> </div>
-           <p>Hot Tea</p>
-           <p>&#8369; <strong>70.00</strong></p>
-          </div>
-        </div>
-        <div class="menu-hot-coffee">
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_01.png" alt=""> </div>
-           <p>Coffee Fraff</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_02.png" alt=""> </div>
-           <p>Choco Fraff</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/FRAFF_03.png" alt=""> </div>
-           <p>Taho Fraff</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-        </div>
-        <div class="menu-hot-coffee">
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_01.png" alt=""> </div>
-           <p>Strawberry Juice</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_02.png" alt=""> </div>
-           <p>Sweet Juice</p>
-           <p>&#8369; <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1"> 
-           <div> <img class="image-coffee" src="../PICTURES/MENU/JUICE_03.png" alt=""> </div>
-           <p>Iced Tea</p>
-           <p>&#8369; <strong>70.00</strong></p>
-          </div>
-        </div>
-
-        </div>
-        <div class="order-total">
-          <h3>Total</h3>
-          <p>Quantity: 5</p>
-          <p>&#8369; <strong>880.00</strong></p>
-        </div>
-
-
-      </div>
-
-      <div class="place-order">
-      <div>
-        <h2 class="section-title">Place Your Order</h2>
-      </div>
-      
+    <section class="order mt-4">
+      <h2>Your Order</h2>
 
       <div class="order-container">
-      
+        <!-- Menu Items -->
+        <div class="scrollbar menu-hot-coffee">
+          <div class="hot-coffee-1" data-name="Coffee Americano" data-price="70"> 
+            <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE.png" alt="Coffee Americano">
+            <p>Coffee Americano</p>
+            <p>₱ <strong>70.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Coffee Latte" data-price="80"> 
+            <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE_LATTE_01.png" alt="Coffee Latte">
+            <p>Coffee Latte</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Hot Choco" data-price="85">
+            <img class="image-coffee" src="../PICTURES/MENU/HOT_CHOCO.png" alt="Hot Choco">
+            <p>Hot Choco</p>
+            <p>₱ <strong>85.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Hot Tea" data-price="70">
+            <img class="image-coffee" src="../PICTURES/MENU/HOT_TEA.png" alt="Hot Tea">
+            <p>Hot Tea</p>
+            <p>₱ <strong>70.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Coffee Fraff" data-price="80">
+            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_01.png" alt="Coffee Fraff">
+            <p>Coffee Fraff</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Choco Fraff" data-price="80">
+            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_02.png" alt="Choco Fraff">
+            <p>Choco Fraff</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Taho Fraff" data-price="80">
+            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_03.png" alt="Taho Fraff">
+            <p>Taho Fraff</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Strawberry Juice" data-price="80">
+            <img class="image-coffee" src="../PICTURES/MENU/JUICE_01.png" alt="Strawberry Juice">
+            <p>Strawberry Juice</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Sweet Juice" data-price="80">
+            <img class="image-coffee" src="../PICTURES/MENU/JUICE_02.png" alt="Sweet Juice">
+            <p>Sweet Juice</p>
+            <p>₱ <strong>80.00</strong></p>
+          </div>
+          <div class="hot-coffee-1" data-name="Iced Tea" data-price="70">
+            <img class="image-coffee" src="../PICTURES/MENU/JUICE_03.png" alt="Iced Tea">
+            <p>Iced Tea</p>
+            <p>₱ <strong>70.00</strong></p>
+          </div>
+        </div>
+
         <!-- Cart Sidebar -->
         <aside class="cart">
           <h3>Your Cart</h3>
           <div id="cartList" class="cart-list" aria-live="polite"></div>
 
-          <div class="cart-summary">
-        
-              <strong>Total</strong>
-              <strong id="cartTotal">₱0</strong>
-          
+          <div class="cart-summary d-flex justify-content-between">
+            <strong>Total</strong>
+            <strong id="cartTotal">₱0</strong>
           </div>
-          
+
           <hr />
 
           <div class="checkout">
@@ -138,9 +120,6 @@
               <option value="Delivery">Delivery</option>
             </select> 
 
-            
-
-            <!-- Hidden extra fields -->
             <div id="paymentRequirements">
               <label for="cartAccount">Account Number *</label>
               <input id="cartAccount" placeholder="e.g., 09xxxxxxxxx / Bank Account #" />
@@ -153,18 +132,17 @@
             <input id="cartAddress" placeholder="Street, City" />
 
             <div id="cartMsg" class="message-area" aria-live="polite"></div>
-            <div class="confirmation-btn">
-              <button id="confirmCart" class="btn primary">Confirm Order</button>
-              <button id="clearCart" class="btn" >Clear Cart</button>
+            <div class="confirmation-btn mt-3">
+              <button id="confirmCart" class="btn btn-dark">Confirm Order</button>
+              <button id="clearCart" class="btn btn-outline-secondary">Clear Cart</button>
             </div>
-            
           </div>
         </aside>
       </div>
-      </div>
-    </Section>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-left">
@@ -173,17 +151,18 @@
       </div>
       <div class="footer-right">
         <nav class="small-nav">
-          <a href="https://instagram.com" target="_blank"><img class="IG-Logo" src="../PICTURES/HERO/IG_Logo.png" 
-       alt="Instagram"></a>
-          <a href="https://www.facebook.com/kaperazzoPH" target="_blank"><img class="FB-Logo" src="../PICTURES/HERO/FB_Logo.png" 
-       alt="Facebook"></a>
-
+          <a href="https://instagram.com" target="_blank"><img class="IG-Logo" src="../PICTURES/HERO/IG_Logo.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com/kaperazzoPH" target="_blank"><img class="FB-Logo" src="../PICTURES/HERO/FB_Logo.png" alt="Facebook"></a>
         </nav>
         <p class="muted">Built for a school project • No payments processed</p>
       </div>
     </div>
   </footer>
 
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- External JS -->
+  <script src="../JS/order.js"></script>
 </body>
 </html>
