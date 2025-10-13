@@ -1,0 +1,130 @@
+.order {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cart {
+    width: 400px;
+    
+}
+
+/* Scrollable cart list */
+#cartList {
+    max-height: 250px; 
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 8px;
+    scrollbar-width: thin;
+}
+
+#cartList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#cartList::-webkit-scrollbar-track {
+    background: rgb(46, 46, 46);
+    border-radius: 10px;
+}
+
+#cartList::-webkit-scrollbar-thumb {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#cartList::-webkit-scrollbar-thumb:hover {
+    background-color: #cfdfff;
+}
+
+.order-total {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.confirmation-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hot-coffee-1 {
+    flex: 1;
+    background-color: rgb(46, 46, 46);
+    color: aliceblue;
+    border-radius: 10px;
+    border: 2px solid aliceblue;
+    box-shadow: 0 1px 5px rgba(49, 49, 49, 0.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    width: 700px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.hot-coffee-1:hover {
+    transform: scale(1.02);
+    background-color: rgb(60, 60, 60);
+}
+
+.image-coffee {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Scrollbar for menu */
+.scrollbar {
+    height: 500px;
+    width: 720px;
+    border: 2px dotted black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+#paymentRequirements {
+    margin-top: 12px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+    .order {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .hot-coffee-1,
+    .scrollbar {
+        width: 90%;
+    }
+
+    .cart {
+        width: 90%;
+    }
+
+    .scrollbar {
+        height: 400px;
+    }
+
+    #cartList {
+        max-height: 200px;
+    }
+}
