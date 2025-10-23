@@ -7,7 +7,7 @@
 
 KapeRazzo Coffee House is a cozy neighborhood café serving specialty coffee, teas, and freshly baked pastries. We aim to create a warm, welcoming space where people can relax, order ahead, or reserve a table. Our goal is simple: good drinks, good food, good company.
 
-- Note: Updated codebase (per mentor feedback) is on branch MS1_REVISION_CONRAD-1. Review there for the latest changes.
+- Note: Updated codebase for js implementation is on branch JS_IMPLEMENTATION. Review there for the latest changes.
 
 ---
 
@@ -133,7 +133,8 @@ Here’s an outline of how the website is organized:
 ## Technologies Used
 
 - HTML5, CSS3 (+ any frameworks used, e.g. Bootstrap, or custom CSS)  
-- JavaScript (for interactivity, forms)- Upcoming enhancements
+- JavaScript (for interactivity, forms)- Includes modular JS for Menu, Cart, Reservations, and Admin interactions
+- Bootstrap 5 (via CDN or local assets) for responsive components and layout
 - Optional backend (for Admin / data storage) – could be PHP, Node.js, or a static site with JSON.  
 - Deployment via GitHub Pages
 
