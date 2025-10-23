@@ -133,7 +133,8 @@ Here’s an outline of how the website is organized:
 ## Technologies Used
 
 - HTML5, CSS3 (+ any frameworks used, e.g. Bootstrap, or custom CSS)  
-- JavaScript (for interactivity, forms)- Upcoming enhancements
+- JavaScript (for interactivity, forms)- Includes modular JS for Menu, Cart, Reservations, and Admin interactions
+- Bootstrap 5 (via CDN or local assets) for responsive components and layout
 - Optional backend (for Admin / data storage) – could be PHP, Node.js, or a static site with JSON.  
 - Deployment via GitHub Pages
 
