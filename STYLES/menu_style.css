@@ -54,3 +54,25 @@
 .hot-coffee{
     margin-top: 50px;
 }
+
+.popup-msg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.popup-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+

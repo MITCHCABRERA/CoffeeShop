@@ -5,7 +5,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     console.log("order.js: DOMContentLoaded");
 
-    // Elements
     const cartList = document.getElementById("cartList") || document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
     const clearCartBtn = document.getElementById("clearCart") || document.getElementById("clearCartBtn");
@@ -17,7 +16,6 @@
       return;
     }
 
-    // form inputs
     const nameInput = document.getElementById("cartName");
     const phoneInput = document.getElementById("cartPhone");
     const methodSelect = document.getElementById("cartMethod");
@@ -25,9 +23,14 @@
     const refInput = document.getElementById("cartRef");
     const addressInput = document.getElementById("cartAddress");
 
-    let cart = [];
+    // ✅ Load cart from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Helper to escape HTML
+    // Save cart to localStorage
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
     function escapeHtml(str) {
       return String(str)
         .replace(/&/g, "&amp;")
@@ -37,14 +40,11 @@
         .replace(/'/g, "&#039;");
     }
 
-    // Auto-hide after 5 seconds
     function showMessage(html) {
       if (!messageArea) return;
-
       messageArea.innerHTML = html;
       messageArea.style.opacity = "1";
 
-      // fade out after 5s
       setTimeout(() => {
         messageArea.style.transition = "opacity 0.5s ease";
         messageArea.style.opacity = "0";
@@ -55,17 +55,16 @@
       }, 5000);
     }
 
-    // Add item click listeners
+    // Add click listeners to menu items (for menu.html)
     const menuItems = document.querySelectorAll(".hot-coffee-1");
-    if (!menuItems || menuItems.length === 0) console.warn("order.js: No menu items (.hot-coffee-1) found.");
-
     menuItems.forEach(item => {
       item.addEventListener("click", () => {
-        const name = item.getAttribute("data-name") || item.dataset.name;
-        const priceRaw = item.getAttribute("data-price") || item.dataset.price;
-        const price = parseFloat(priceRaw);
+        const name = item.querySelector("p")?.innerText || "Unknown";
+        const priceText = item.querySelector("strong")?.innerText || "0";
+        const price = parseFloat(priceText);
+
         if (!name || isNaN(price)) {
-          console.warn("order.js: skipped item with invalid data:", name, priceRaw);
+          console.warn("order.js: skipped invalid item", name, price);
           return;
         }
 
@@ -73,15 +72,22 @@
         if (existing) existing.quantity += 1;
         else cart.push({ name, price, quantity: 1 });
 
+        saveCart(); // ✅ keep it saved
+        showMessage(`<div class="alert alert-success">✅ ${name} added to cart!</div>`);
         renderCart();
       });
     });
 
-    // Render cart
+    // Render cart contents
     function renderCart() {
       cartList.innerHTML = "";
-      let total = 0;
+      if (cart.length === 0) {
+        cartList.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.textContent = "₱0.00";
+        return;
+      }
 
+      let total = 0;
       cart.forEach((item, index) => {
         total += item.price * item.quantity;
 
@@ -98,9 +104,10 @@
       });
 
       cartTotal.textContent = "₱" + total.toFixed(2);
+      saveCart();
     }
 
-    // Remove item
+    // Remove an item
     cartList.addEventListener("click", (evt) => {
       const btn = evt.target.closest(".remove-btn");
       if (!btn) return;
@@ -114,29 +121,27 @@
     if (clearCartBtn) {
       clearCartBtn.addEventListener("click", () => {
         cart = [];
+        saveCart();
         renderCart();
         showMessage(`<div class="alert alert-secondary">🧹 Cart cleared.</div>`);
       });
-    } else {
-      console.warn("order.js: clear cart button not found (id='clearCart').");
     }
 
     // Confirm order
     if (confirmBtn) {
       confirmBtn.addEventListener("click", (e) => {
         e.preventDefault();
-
         if (cart.length === 0) {
           showMessage(`<div class="alert alert-warning">🛒 Your cart is empty.</div>`);
           return;
         }
 
-        const nameVal = nameInput ? nameInput.value.trim() : "";
-        const phoneVal = phoneInput ? phoneInput.value.trim() : "";
-        const methodVal = methodSelect ? methodSelect.value : "";
-        const accountVal = accountInput ? accountInput.value.trim() : "";
-        const refVal = refInput ? refInput.value.trim() : "";
-        const addressVal = addressInput ? addressInput.value.trim() : "";
+        const nameVal = nameInput?.value.trim() || "";
+        const phoneVal = phoneInput?.value.trim() || "";
+        const methodVal = methodSelect?.value || "";
+        const accountVal = accountInput?.value.trim() || "";
+        const refVal = refInput?.value.trim() || "";
+        const addressVal = addressInput?.value.trim() || "";
 
         if (!nameVal || !phoneVal || !methodVal || !accountVal || !refVal) {
           showMessage(`<div class="alert alert-warning">⚠️ Please fill out all required fields.</div>`);
@@ -150,7 +155,6 @@
 
         const totalAmount = cart.reduce((s, it) => s + it.price * it.quantity, 0);
 
-        // Save order to localStorage (for Admin Panel)
         const orderData = {
           name: nameVal,
           phone: phoneVal,
@@ -167,27 +171,18 @@
         orders.push(orderData);
         localStorage.setItem("orders", JSON.stringify(orders));
 
-        // success message
-        const successHtml = `<div class="alert alert-success">
+        showMessage(`<div class="alert alert-success">
           ✅ Thank you, <strong>${escapeHtml(nameVal)}</strong>! Your order is confirmed.<br>
           <small>Total: ₱${totalAmount.toFixed(2)}</small>
-        </div>`;
-        showMessage(successHtml);
+        </div>`);
 
-        // clear cart and inputs
         cart = [];
+        saveCart();
         renderCart();
-        if (nameInput) nameInput.value = "";
-        if (phoneInput) phoneInput.value = "";
-        if (accountInput) accountInput.value = "";
-        if (refInput) refInput.value = "";
-        if (addressInput) addressInput.value = "";
       });
-    } else {
-      console.warn("order.js: confirm button not found (id='confirmCart').");
     }
 
-    // initial render
+    // Initial render (load cart from localStorage)
     renderCart();
   });
 })();
