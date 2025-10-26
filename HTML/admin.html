@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>KapeRazzo Coffee House — Admin</title>
+  <link rel="stylesheet" href="../STYLES/styles.css"/>
+</head>
+<body>
+  <header class="site-header fixed-top bg-dark text-light border-top border-3 border-dark">
+    <div class="container header-inner d-flex flex-wrap justify-content-between align-items-center py-3">
+      <a class="brand d-flex align-items-center text-decoration-none" href="index.html">
+        <img class="logo me-3" src="../PICTURES/KapeRazzo_logo.jpg" alt="Company Logo">
+        <div>
+          <h1 class="h4 mb-0 text-light">KapeRazzo Coffee House</h1>
+          <span class="tagline text-light">Warm cups. Cozy vibes.</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+         <nav class="main-nav d-flex flex-wrap justify-content-center gap-2" aria-label="Main">
+      <a href="../index.html" class="nav-btn btn btn-sm btn-outline-dark">Home</a>
+      <a href="menu.html" class="nav-btn btn btn-sm btn-dark active">Menu</a>
+      <a href="order.html" class="nav-btn btn btn-sm btn-outline-dark">Order</a>
+      <a href="reservation.html" class="nav-btn btn btn-sm btn-outline-dark">Reserve</a>
+      <a href="gallery.html" class="nav-btn btn btn-sm btn-outline-dark">Gallery</a>
+      <a href="about.html" class="nav-btn btn btn-sm btn-outline-dark">About</a>
+      <a href="admin.html" class="nav-btn btn btn-sm btn-outline-dark">Admin</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Admin Panel — Demo</h2>
+      <p class="muted">This is a demo admin panel that uses browser localStorage to store orders and reservations (for your school project). Data is stored only on your browser.</p>
+
+      <div class="admin-actions">
+        <button class="btn" id="viewBtn">View Stored Data</button>
+        <button class="btn" id="exportBtn">Export JSON</button>
+        <button class="btn" id="clearBtn">Clear All</button>
+      </div>
+
+      <pre id="adminOutput" class="admin-output"></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <strong>KapeRazzo Coffee House</strong>
+        <p class="muted">📍 11 GENERAL TIRONA ST. BRGY 138 BAGONG BARRIO • Mon–Sun 7:00 AM – 9:00 PM</p>
+      </div>
+      <div class="footer-right">
+        <nav class="small-nav">
+          <a href="https://instagram.com" target="_blank"><img class="IG-Logo" src="../PICTURES/HERO/IG_Logo.png" 
+       alt="Instagram"></a>
+          <a href="https://www.facebook.com/kaperazzoPH" target="_blank"><img class="FB-Logo" src="../PICTURES/HERO/FB_Logo.png" 
+       alt="Facebook"></a>
+
+        </nav>
+        <p class="muted">Built for a school project • No payments processed</p>
+      </div>
+    </div>
+  </footer>
+<script src="../JS/admin.js"></script>
+</body>
+</html>
