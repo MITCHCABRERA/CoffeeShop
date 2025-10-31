@@ -148,6 +148,14 @@ Here’s an outline of how the website is organized:
 
 ---
 
+<<<<<<< HEAD
+=======
+📘 **Project Plan:**  
+You can view our detailed development and revision timeline here: https://docs.google.com/spreadsheets/d/1E4tAfxPUF5yBLNnu5sZLmQg42hFM-adwZJbKHZo_pVE/edit?usp=sharing 
+
+---
+
+>>>>>>> 596c9963e62d5af9fa13dc136dae1cd3a62bc908
 ## License
 
 This project is for educational/school purposes. No commercial license included.  

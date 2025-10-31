@@ -11,6 +11,7 @@
   --container: 1200px;
 }
 
+<<<<<<< HEAD
 /* --- Logout Button Styling --- */
 #logoutBtn {
   color: #fff;
@@ -31,6 +32,8 @@
 }
 
 
+=======
+>>>>>>> 596c9963e62d5af9fa13dc136dae1cd3a62bc908
 
 *{box-sizing:border-box}
 body{
