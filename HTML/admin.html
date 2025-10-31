@@ -19,6 +19,15 @@
 =======
   <title>KapeRazzo Coffee House — Admin</title>
   <link rel="stylesheet" href="../STYLES/styles.css"/>
+
+<!-- Redirect to login if not logged in -->
+  <script>
+    const user = sessionStorage.getItem("loggedInUser");
+    if (user !== "admin") { // only allow admin
+      window.location.href = "login.html";
+    }
+  </script>
+
 </head>
 <body>
   <header class="site-header fixed-top bg-dark text-light border-top border-3 border-dark">

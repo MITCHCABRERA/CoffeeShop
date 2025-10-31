@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // current mode: false = user, true = admin
   let isAdmin = false;
 
-  // Demo credentials (change as needed)
+  // Demo credentials
   const adminCred = { username: "admin", password: "admin123" };
   const userCred  = { username: "user",  password: "user123" };
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // toggle button
-  toggleRole.addEventListener("click", (e) => {
+  toggleRole.addEventListener("click", () => {
     isAdmin = !isAdmin;
     updateModeUI();
     console.log("login.js: mode changed. isAdmin =", isAdmin);
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isAdmin) {
       if (u === adminCred.username && p === adminCred.password) {
         console.log("login.js: admin success - redirecting to admin.html");
-        // admin.html is expected to be in the same folder as login.html
+        sessionStorage.setItem("loggedInUser", "admin"); // save session
         window.location.href = "admin.html";
         return;
       } else {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       if (u === userCred.username && p === userCred.password) {
         console.log("login.js: user success - redirecting to site index");
-        // go to the site root index (login.html is in /PAGES so use ../index.html)
+        sessionStorage.setItem("loggedInUser", "user"); // save session
         window.location.href = "../index.html";
         return;
       } else {
