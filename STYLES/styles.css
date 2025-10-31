@@ -11,6 +11,26 @@
   --container: 1200px;
 }
 
+/* --- Logout Button Styling --- */
+#logoutBtn {
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease;
+
+  /* positioning to the far right corner */
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#logoutBtn:hover {
+  background-color: #dc3545; /* red hover */
+  color: #fff;
+  border-color: #dc3545;
+}
+
+
 
 *{box-sizing:border-box}
 body{
@@ -22,7 +42,9 @@ body{
 
 .site-header{padding-left: 20px; padding-right: 20px; background: linear-gradient(180deg,#222,#111);;color:#fff;border-bottom: 1px solid rgba(255,255,255,0.06);
             position: fixed; top:0px; left: 0px; right: 0px;
-            }
+  z-index: 1050;
+  background-color: #222; /* fallback */
+}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
 .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
 .logo{width:50;height:50px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #f1c27d,#8a4b2f);box-shadow:var(--shadow)}
@@ -183,4 +205,3 @@ textarea{min-height:80px}
 #confirmCart { margin-top:12px; }
 #clearCart { margin-top:8px; }
 .message-area { min-height:20px; margin-top:6px; font-size:14px; }
-

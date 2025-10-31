@@ -14,23 +14,22 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html">
-        <img src="../PICTURES/KapeRazzo_logo.jpg" class="logo" alt="KapeRazzo Logo" />
+  <header class="site-header fixed-top bg-dark text-light border-top border-3 border-dark">
+    <div class="container header-inner d-flex flex-wrap justify-content-between align-items-center py-3">
+      <a class="brand d-flex align-items-center text-decoration-none" href="index.html">
+        <img class="logo me-3" src="../PICTURES/KapeRazzo_logo.jpg" alt="Company Logo">
         <div>
-          <h1>KapeRazzo Coffee House</h1>
-          <span class="tagline">Warm cups. Cozy vibes.</span>
+          <h1 class="h4 mb-0 text-light">KapeRazzo Coffee House</h1>
+          <span class="tagline text-light">Warm cups. Cozy vibes.</span>
         </div>
       </a>
-      <nav class="main-nav" aria-label="Main">
-        <a href="../index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="order.html" class="active">Order</a>
-        <a href="reservation.html">Reserve</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="admin.html">Admin</a>
+       <nav class="main-nav d-flex flex-wrap justify-content-center gap-2" aria-label="Main">
+      <a href="../index.html" class="nav-btn btn btn-sm btn-outline-dark">Home</a>
+      <a href="menu.html" class="nav-btn btn btn-sm btn-outline-dark">Menu</a>
+      <a href="order.html" class="nav-btn btn btn-sm btn-dark active">Order</a>
+      <a href="reservation.html" class="nav-btn btn btn-sm btn-outline-dark">Reserve</a>
+      <a href="gallery.html" class="nav-btn btn btn-sm btn-outline-dark">Gallery</a>
+      <a href="about.html" class="nav-btn btn btn-sm btn-outline-dark">About</a>
       </nav>
     </div>
   </header>
@@ -41,58 +40,16 @@
       <h2>Your Order</h2>
 
       <div class="order-container">
-        <!-- Menu Items -->
-        <div class="scrollbar menu-hot-coffee">
-          <div class="hot-coffee-1" data-name="Coffee Americano" data-price="70"> 
-            <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE.png" alt="Coffee Americano">
-            <p>Coffee Americano</p>
-            <p>₱ <strong>70.00</strong></p>
+        <!-- Confirmed Orders Screen -->
+        <div id="confirmedOrdersSection" class="confirmed-orders w-100 pe-4 mt-4">
+          <h4 class="text-secondary fw-semibold">Confirmed Orders</h4>
+          <p class="text-muted">Below are your confirmed orders. You can cancel any if needed.</p>
+          
+          <div id="confirmedOrdersList" class="list-group">
+            <!-- Orders will be displayed here dynamically -->
           </div>
-          <div class="hot-coffee-1" data-name="Coffee Latte" data-price="80"> 
-            <img class="image-coffee" src="../PICTURES/MENU/HOT_COFFEE_LATTE_01.png" alt="Coffee Latte">
-            <p>Coffee Latte</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Hot Choco" data-price="85">
-            <img class="image-coffee" src="../PICTURES/MENU/HOT_CHOCO.png" alt="Hot Choco">
-            <p>Hot Choco</p>
-            <p>₱ <strong>85.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Hot Tea" data-price="70">
-            <img class="image-coffee" src="../PICTURES/MENU/HOT_TEA.png" alt="Hot Tea">
-            <p>Hot Tea</p>
-            <p>₱ <strong>70.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Coffee Fraff" data-price="80">
-            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_01.png" alt="Coffee Fraff">
-            <p>Coffee Fraff</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Choco Fraff" data-price="80">
-            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_02.png" alt="Choco Fraff">
-            <p>Choco Fraff</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Taho Fraff" data-price="80">
-            <img class="image-coffee" src="../PICTURES/MENU/FRAFF_03.png" alt="Taho Fraff">
-            <p>Taho Fraff</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Strawberry Juice" data-price="80">
-            <img class="image-coffee" src="../PICTURES/MENU/JUICE_01.png" alt="Strawberry Juice">
-            <p>Strawberry Juice</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Sweet Juice" data-price="80">
-            <img class="image-coffee" src="../PICTURES/MENU/JUICE_02.png" alt="Sweet Juice">
-            <p>Sweet Juice</p>
-            <p>₱ <strong>80.00</strong></p>
-          </div>
-          <div class="hot-coffee-1" data-name="Iced Tea" data-price="70">
-            <img class="image-coffee" src="../PICTURES/MENU/JUICE_03.png" alt="Iced Tea">
-            <p>Iced Tea</p>
-            <p>₱ <strong>70.00</strong></p>
-          </div>
+
+          <p id="noOrdersMsg" class="text-center text-muted mt-4">No confirmed orders yet.</p>
         </div>
 
         <!-- Cart Sidebar -->
@@ -164,5 +121,6 @@
 
   <!-- External JS -->
   <script src="../JS/order.js"></script>
+  <script src="../JS/confirmed_orders.js"></script>
 </body>
 </html>
